@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  go-app:
+    build: .
+    ports:
+      - "1323:1323"
+    environment:
+      - DROPBOX_TOKEN=${DROPBOX_TOKEN}
+    restart: unless-stopped
